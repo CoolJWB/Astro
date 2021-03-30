@@ -1,0 +1,169 @@
+body {
+	background-color: rgb(22, 22, 22);
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+h1 {
+	margin-top: 3%;
+	margin-bottom: 0%;
+	color: white;
+	
+	font-family: 'Roboto';
+	text-shadow: 2px 2px rgb(37, 37, 37), 4px 4px rgb(37, 37, 37);
+	font-size: 70px;
+}
+
+p {
+	width: 50%;
+	margin: auto;
+	color: white;
+	
+	font-family: 'Roboto';
+	font-size: 14px;
+}
+
+
+
+/* Navigation bars */
+.navbarIcon {
+	display: inline-block;
+	position: absolute;
+	cursor: pointer;
+
+	top: 15px;
+	margin-left: 7px;
+
+	z-index: 1;
+}
+  
+.navbarIcon1, .navbarIcon2, .navbarIcon3 {
+	width: 35px;
+	height: 5px;
+	background-color: white;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+  
+.change .navbarIcon1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+  
+.change .navbarIcon2 {opacity: 0;}
+  
+.change .navbarIcon3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+#navbar {
+	list-style-type: none;
+	display: flex;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0px;
+	padding: 0;
+	height: 69px;
+	
+	overflow: hidden;
+	transition: width 4s;
+}
+
+#navbar li {
+	float: left;
+}
+
+/* Draw the navbar buttons. */
+#navbar a {
+	display: block;
+	color: white;
+	
+	text-align: center;
+	padding: 24px 24px;
+	
+	text-decoration: none;
+	font-family: Verdana;
+}
+
+/* Draws the color when hovering over a button in the navbar. */
+#navbar a:hover:not(.active) {
+	opacity: 0.4 !important;
+}
+
+/* Shows the active navigation in the navigation bar. */
+#navbar #active {
+	opacity: 0.6;
+}
+
+#navbar #login {
+	justify-content: flex-end;
+}
+
+
+
+/* Custom symbols */
+.fa {
+	display: block;
+	color: white;
+	
+	text-align: center;
+	padding: 24px 24px;
+	
+	text-decoration: none;
+	font-size: 36px;
+	text-shadow: 2px 2px rgb(37, 37, 37), 4px 4px rgb(37, 37, 37);
+}
+
+.userInfo {
+	position: fixed;
+	right: 0;
+	top: 0;
+	font-size: 36px;
+}
+
+.userInfo #userInfoDropdown {
+	list-style-type: none;
+
+	padding: 0;
+	margin-top: 0;
+	
+	overflow: hidden;
+	opacity: 0.7;
+	transition: height 0.5s;
+}
+
+.userInfo #userInfoList {
+	display: block;
+	color: white;
+
+	
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	
+	text-decoration: none;
+	font-family: Verdana;
+
+
+	transition: height 2s;
+}
+
+.userInfo #userInfoList p {
+	font-size: 12px;
+}
+
+
+
+/* Device configuration */
+@media only screen and (max-width: 768px) {
+	#navbar {
+		font-size: 10px;
+	}
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Astro Evolution</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles/index.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<!-- WEBSITE TOP -->
+	<!--<img src="assets/header-background.jpg" id="header-background">-->
+	<!-- WEBSITE TOP END -->
+
+
+
+	<!-- WEBSITE MIDDLE -->
+	<p class="logo unselectable" id="title">ASTRO EVOLUTION</p>
+	<button onclick="moveDown()" class="center arrow unselectable" id="down">﹀</button>
+
+	<div class="page">
+
+	</div>
+	<!-- WEBSITE MIDDLE END -->
+
+
+
+	<!-- WEBSITE BOTTOM -->
+	<!-- The bottom list of links to social media places -->
+	<ul id="bottomNavbar">
+		<li><a href="https://twitter.com/astro_evolution"><i class="fa fa-twitter" style="color:#00ACEE"></i></a></li>
+	</ul>
+	<!-- WEBSITE BOTTOM END -->
+</body>
+
+<script>
+	function moveDown() {
+		window.scrollTo(0, 1050);
+	}
+	function moveUp() {
+		window.scrollTo(0, 0);
+	}
+</script>
+
+</html>

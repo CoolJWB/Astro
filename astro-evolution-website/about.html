@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>About CoolJWB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles/about.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="navbarIcon" onclick="toggleNavbar(this)">
+		<div class="navbarIcon1"></div>
+		<div class="navbarIcon2"></div>
+		<div class="navbarIcon3"></div>
+	</div>
+
+	<ul id="navbar" style="width: 0px;">
+		<li><a href="index.html" style="margin-left: 75px;"><b>HOME</b></a></li>
+		<li><a id="active" href="about.html"><b>ABOUT</b></a></li>
+		<!--<li><a href="forum.php"><b>FORUM</b></a></li>-->
+		<li><a href="games.html"><b>GAMES</b></a></li>
+		<li id=space></li>
+		<li id="login"><a href="login.html">&#x1F511;</a></li>
+	</ul>
+
+	<div class="userInfo">
+		<a href="userinfo.php"><i id="userIcon" class="fa fa-user-circle"></i></a>
+	</div>
+
+	<h1 class="center"> About me </h1>
+
+	<p class="center">
+		Hello I'm William, when I was 8 my father introduced me to C++ and the first time I printed "Hello World!" in
+		the console I knew what I wanted to do for the rest of my life.
+		My father assisted me at the start but already a few weeks later I had learned the basics and would be able to
+		write software myself. Most of the code were messy and consisted
+		of ifs and elses but it was a start.
+	</p>
+
+</body>
+
+<script>
+	let navbarElement = document.getElementById("navbar");
+	document.getElementById("userIcon").addEventListener("mousedown", toggleUserInfo());
+
+	function toggleNavbar(x) {
+		x.classList.toggle("change");
+
+		if (Number(navbarElement.style.width.replace("px", "")) <= 0) {
+			navbarElement.style.width = "470px";
+		}
+		else {
+			navbarElement.style.width = "0px";
+		}
+	}
+</script>
+
+</html>

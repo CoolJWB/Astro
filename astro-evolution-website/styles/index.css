@@ -1,0 +1,162 @@
+/* Background, body and useful classes */
+html {
+	scroll-behavior: smooth;
+}
+body {
+	display: flow-root;
+	/* background-color: rgb(22, 22, 22); Make sure that if the background image isn't loaded correctly that the standard background color is still there. */
+	background-image: url("../assets/header-background-lowres.jpg");
+	background-color: rgb(21,21,41);
+	background-size: contain;
+	background-repeat: no-repeat;
+	/*overflow: hidden; Remove scroll bar */
+	
+	margin: 0;
+	height: 1000vh;
+}
+#header-background {
+	width: 100vw;
+}
+.center {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+.unselectable {
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+	width: 15px;
+}
+::-webkit-scrollbar-track {
+	background: #222222; 
+}
+::-webkit-scrollbar-thumb {
+	background: #363636; 
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #333333; 
+}
+
+
+
+/* Neon text by Sarah Fossheim: https://codepen.io/fossheim/pen/PoqKoLY */
+:root {
+	--shadow-color: rgb(0, 0, 0);
+	--shadow-color-light:  rgb(42, 42, 42);
+}
+/* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}*/
+p {
+	margin: calc(50vh - 40px) auto 0 auto;
+	font-size: 65px;
+	text-transform: uppercase;
+	font-family: "Archivo Black", "Archivo", sans-serif;
+	font-weight: normal;
+	display: block;
+	height: auto;
+	text-align: center;
+}
+.logo {
+	color: white;
+	animation: neon 3s infinite;
+}
+@keyframes neon {
+	0% {
+		text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+		0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+		0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+	}
+	50% {
+		text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+		0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+		0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+	}
+	100% {
+		text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+		0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+		0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+	}
+}
+
+
+
+.page {
+	background-color: white;
+	color: black;
+}
+.arrow {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+
+    font-size: 72px;
+}
+.arrow:focus {
+    outline:0;
+}
+
+
+
+/* Media links at bottom navbar */
+#bottomNavbar {
+	position: fixed;
+	list-style-type: none;
+
+	margin: 0;
+	padding: 0;
+	
+	bottom: 0%;
+	left: 0%;
+	
+	overflow: hidden;
+}
+#bottomNavbar li {
+	float: left;
+}
+#bottomNavbar a {
+	font-size: 36px; /* Other settings inherited from class fa. */
+}
+#bottomNavbar a:hover:not(.active) {
+	opacity: 0.5;
+}
+
+
+
+/* Custom symbols */
+.fa {
+	display: block;
+	color: white;
+	
+	text-align: center;
+	padding: 24px 24px;
+	
+	text-decoration: none;
+	font-size: 36px;
+	text-shadow: 2px 2px rgb(37, 37, 37), 4px 4px rgb(37, 37, 37);
+}
+
+
+
+/* Device configuration */
+/* @media only screen and (max-width: 1280px) {
+	
+}
+
+@media only screen and (max-width: 768px) {
+	
+}
+
+@media only screen and (max-device-width: 480px) {
+	
+} */
