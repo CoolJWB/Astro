@@ -22,6 +22,12 @@ body {
 	display: flex;
 	justify-content: center;
 }
+.downcenter {
+	margin: auto;
+	position: absolute;
+	bottom: 10px;
+	left: 48%;
+}
 .unselectable {
 	-webkit-user-select: none; /* Safari */        
 	-moz-user-select: none; /* Firefox */
@@ -57,7 +63,7 @@ body {
 	margin: 0;
 	box-sizing: border-box;
 }*/
-p {
+.logo {
 	margin: calc(50vh - 40px) auto 0 auto;
 	font-size: 65px;
 	text-transform: uppercase;
@@ -66,8 +72,6 @@ p {
 	display: block;
 	height: auto;
 	text-align: center;
-}
-.logo {
 	color: white;
 	animation: neon 3s infinite;
 }
