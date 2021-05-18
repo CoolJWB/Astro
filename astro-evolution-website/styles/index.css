@@ -21,7 +21,7 @@ body {
 
 
 .page {
-
+	position: relative;
 }
 
 
@@ -138,7 +138,26 @@ body {
 	color: white;
 
 	font-family: Arial, Helvetica, sans-serif;
-	z-index: 5;
+}
+
+/*.notfirst {
+	margin-top: 400px;
+}*/
+
+#pictures1 {
+	background-image: url("../assets/earth-in-space.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#pictures2 {
+	background-image: url("../assets/381-1233891708GdW7.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 /* Download style */
