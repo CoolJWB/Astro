@@ -7,26 +7,21 @@ body {
 	/* background-color: rgb(22, 22, 22); Make sure that if the background image isn't loaded correctly that the standard background color is still there. */
 	background-image: url("../assets/header-background-lowres.jpg");
 	background-color: rgb(21,21,41);
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	/*overflow: hidden; Remove scroll bar */
 	
 	margin: 0;
-	height: 1000vh;
+	height: 65vh;
 }
-#header-background {
-	width: 100vw;
+
+.top {
+	height: 100%;
 }
-.center {
-	margin: auto;
-	display: flex;
-	justify-content: center;
-}
-.unselectable {
-	-webkit-user-select: none; /* Safari */        
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+/Edge */
-	user-select: none; /* Standard */
+
+
+.page {
+
 }
 
 
@@ -52,12 +47,12 @@ body {
 	--shadow-color: rgb(0, 0, 0);
 	--shadow-color-light:  rgb(42, 42, 42);
 }
-/* {
+*{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-}*/
-p {
+}
+.logo {
 	margin: calc(50vh - 40px) auto 0 auto;
 	font-size: 65px;
 	text-transform: uppercase;
@@ -66,11 +61,16 @@ p {
 	display: block;
 	height: auto;
 	text-align: center;
-}
-.logo {
 	color: white;
 	animation: neon 3s infinite;
 }
+
+.center {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
 @keyframes neon {
 	0% {
 		text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
@@ -91,21 +91,84 @@ p {
 
 
 
-.page {
-	background-color: white;
-	color: black;
-}
+/* Arrow things and animation */
 .arrow {
-    background-color: transparent;
+	background-color: transparent;
     border-color: transparent;
     color: white;
-
+	
     font-size: 72px;
-}
-.arrow:focus {
-    outline:0;
+	animation: jump 1s ease-in-out infinite;
+
+	-webkit-filter: drop-shadow(2px 1px 0 black) drop-shadow(-1px -1px 0 black);
+	filter: drop-shadow(2px 1px 0 black) drop-shadow(-1px -1px 0 black);
 }
 
+.arrow:focus {
+	outline:0;
+}
+
+.downcenter {
+	margin: auto;
+	position: absolute;
+	bottom: 10px;
+	left: 48%;
+}
+.unselectable {
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+@keyframes jump {
+	0%,
+	100% { transform: translate(0,0); }
+	50% {transform: translate(0, 10px); }
+}
+
+/* Sections */
+
+.Section {
+	height: 400px;
+}
+
+.textsection {
+	background-color: #3d3e3d;
+	color: white;
+
+	font-family: Arial, Helvetica, sans-serif;
+	z-index: 5;
+}
+
+/* Download style */
+
+#gameDownload {
+	padding-top: 130px;
+	text-align: center;
+}
+
+#gameDownload > button{
+	font-size: 36px;
+	padding: 20px 80px;
+
+	background-color: #808080;
+	font-weight:bold;
+}
+
+#gameDownload > button:hover {
+	background-color: #4b4b4b;
+}
+
+
+/* About style */
+#about > .content {
+	padding: 20px;
+}
+
+.content > h2 {
+	font-size: 30px;
+}
 
 
 /* Media links at bottom navbar */
